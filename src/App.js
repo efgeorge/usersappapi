@@ -13,6 +13,18 @@ function App() {
   // const [isRequesting, setIsRequesting] = useState(false)
   const [category, setCategory] = useState("users")
 
+  // const showItems = async () => {
+  //   const getOptions = {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(items),
+  //   };
+  //   const result = await apiRequest(`${API_URL}/${category}`, getOptions);
+  //   if (result) setFetchError(result);
+  // };
+
   useEffect(() => {
     const fetchItems = async () => {
       try {
@@ -28,20 +40,10 @@ function App() {
       }
     }
     fetchItems();
-    showItems();
-  }, [])
+    // showItems();
+  }, [category])
 
-  const showItems = async () => {
-    const getOptions = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(items),
-    };
-    const result = await apiRequest(`${API_URL}/${category}`, getOptions);
-    if (result) setFetchError(result);
-};
+  
 
   return (
     <div className="App">

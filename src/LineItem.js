@@ -2,7 +2,7 @@ const LineItem = ({ item }) => {
   return (
     <li className="item">
       <label>
-       {item.item}
+       {JSON.stringify({item})}
       </label>
     </li>
   )

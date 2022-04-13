@@ -2,7 +2,7 @@ const LineItem = ({ item }) => {
   return (
     <tr className="item">
          {/* {JSON.stringify(item)} */}
-         {Object.entries(JSON.stringify(item)).forEach(([key, value]) => <td>{`${value}`}</td>)}
+         {Object.entries(item).map(([key, value]) => <td>{JSON.stringify(value)}</td>)}
     </tr>
   )
 }

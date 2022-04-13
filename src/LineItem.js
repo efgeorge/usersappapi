@@ -1,10 +1,9 @@
 const LineItem = ({ item }) => {
   return (
-    <li className="item">
-      <label>
-       {JSON.stringify(item)}
-      </label>
-    </li>
+    <tr className="item">
+         {/* {JSON.stringify(item)} */}
+         {Object.entries(JSON.stringify(item)).forEach(([key, value]) => <td>{`${value}`}</td>)}
+    </tr>
   )
 }
 

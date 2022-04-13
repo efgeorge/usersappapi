@@ -2,14 +2,16 @@ import LineItem from "./LineItem";
 
 const ItemList = ({ items }) => {
   return (
-    <ul>
-      {items.map((item) => (
+    <table>
+      <tbody>
+        {items.map((item) => (
         <LineItem
           key={item.id}
           item={item}
         />
       ))}
-    </ul>
+      </tbody>
+    </table>
   )
 }
 

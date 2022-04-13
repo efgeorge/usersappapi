@@ -6,3 +6,10 @@ hints:
 using useEffect to print the json objects, anytime 1 of the resources changes, run useEffect 
 the dependency for useEffect() should be the request resource 
 use JSON.stringify
+
+part B:
+
+hints:
+
+map through each key of the object with Object.entries
+JSON.stringify still applies

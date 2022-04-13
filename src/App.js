@@ -13,17 +13,6 @@ function App() {
   // const [isRequesting, setIsRequesting] = useState(false)
   const [category, setCategory] = useState("users")
 
-  // const showItems = async () => {
-  //   const getOptions = {
-  //     method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(items),
-  //   };
-  //   const result = await apiRequest(`${API_URL}/${category}`, getOptions);
-  //   if (result) setFetchError(result);
-  // };
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -40,7 +29,6 @@ function App() {
       }
     }
     fetchItems();
-    // showItems();
   }, [category])
 
   
@@ -48,6 +36,7 @@ function App() {
   return (
     <div className="App">
       <Categories 
+        category={category}
         setCategory={setCategory}
       />
       <main>

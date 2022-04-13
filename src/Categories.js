@@ -1,6 +1,6 @@
-const Categories = ({  setCategory }) => {
+const Categories = ({  category, setCategory }) => {
   return (
-    <div> 
+    <div className="buttons"> 
       <button onClick={() => setCategory('users')}>Users</button>
       <button onClick={() => setCategory('posts')}>Posts</button>
       <button onClick={() => setCategory('comments')}>Comments</button>
